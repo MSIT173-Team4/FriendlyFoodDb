@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[tFoodMapPlace] (
+    [fPlaceID]           INT             IDENTITY (1, 1) NOT NULL,
+    [fGooglePlaceID]     VARCHAR (100)   NULL,
+    [fPlaceCategoryID]   INT             NOT NULL,
+    [fName]              NVARCHAR (100)  NOT NULL,
+    [fAddress]           NVARCHAR (300)  NOT NULL,
+    [fLatitude]          DECIMAL (10, 7) NOT NULL,
+    [fLongitude]         DECIMAL (10, 7) NOT NULL,
+    [fPhone]             VARCHAR (30)    NULL,
+    [fDescription]       NVARCHAR (MAX)  NULL,
+    [fGoogleRating]      DECIMAL (2, 1)  NULL,
+    [fGoogleReviewCount] INT             NULL,
+    [fBusinessStatus]    VARCHAR (30)    NULL,
+    [fIsActive]          BIT             CONSTRAINT [DF_tFoodMapPlace_fIsActive] DEFAULT ((1)) NOT NULL,
+    [fCreatedTime]       DATETIME2 (7)   CONSTRAINT [DF_tFoodMapPlace_CreatedTime] DEFAULT (sysdatetime()) NOT NULL,
+    [fUpdatedTime]       DATETIME2 (7)   NULL,
+    CONSTRAINT [PK_tFoodMapPlace] PRIMARY KEY CLUSTERED ([fPlaceID] ASC),
+    CONSTRAINT [CK_tFoodMapPlace_fGoogleRating] CHECK ([fGoogleRating] IS NULL OR [fGoogleRating]>=(0) AND [fGoogleRating]<=(5)),
+    CONSTRAINT [CK_tFoodMapPlace_fGoogleReviewCount] CHECK ([fGoogleReviewCount] IS NULL OR [fGoogleReviewCount]>=(0)),
+    CONSTRAINT [CK_tFoodMapPlace_fLatitude] CHECK ([fLatitude]>=(-90) AND [fLatitude]<=(90)),
+    CONSTRAINT [CK_tFoodMapPlace_fLongitude] CHECK ([fLongitude]>=(-180) AND [fLongitude]<=(180)),
+    CONSTRAINT [FK_tFoodMapPlace_fPlaceCategory] FOREIGN KEY ([fPlaceCategoryID]) REFERENCES [dbo].[tFoodMapPlaceCategory] ([fPlaceCategoryID]),
+    CONSTRAINT [UQ_tFoodMapPlace_fGooglePlaceID] UNIQUE NONCLUSTERED ([fGooglePlaceID] ASC)
+);
+
