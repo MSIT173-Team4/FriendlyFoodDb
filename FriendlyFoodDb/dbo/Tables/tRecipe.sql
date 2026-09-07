@@ -17,6 +17,7 @@
     [fStatus]          TINYINT        NOT NULL,
     [fCreatedAt]       DATETIME2 (7)  NOT NULL,
     [fUpdatedAt]       DATETIME2 (7)  NOT NULL,
-    CONSTRAINT [PK_tRecipe] PRIMARY KEY CLUSTERED ([fRecipeId] ASC)
+    CONSTRAINT [PK_tRecipe] PRIMARY KEY CLUSTERED ([fRecipeId] ASC),
+    CONSTRAINT [FK_UserId_User] FOREIGN KEY ([fUserId]) REFERENCES [dbo].[tUser] ([fId])
 );
 
