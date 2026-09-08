@@ -42,4 +42,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[PK_tMarketProductReview]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="fdf9fc36-bc87-4e77-b035-192fe081260f" ChangeDateTime="09/08/2026 09:51:18">
+    <Property Name="ElementName" Value="[dbo].[PK_tMarketProductFavorites]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[tMarketProductFavorite]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_tMarketProductFavorite]" />
+  </Operation>
 </Operations>
