@@ -2,7 +2,7 @@
     [fFavoriteID]  INT           IDENTITY (1, 1) NOT NULL,
     [fUserId]      INT           NOT NULL,
     [fProductID]   INT           NOT NULL,
-    [fCreatedDate] DATETIME2 (7) DEFAULT (getdate()) NOT NULL,
+    [fCreatedDate] DATETIME2 (7) DEFAULT (sysdatetime()) NOT NULL,
     CONSTRAINT [PK_tMarketFavorites] PRIMARY KEY CLUSTERED ([fFavoriteID] ASC),
     CONSTRAINT [FK_tMarketProductFavorite_tMarketProduct] FOREIGN KEY ([fProductID]) REFERENCES [dbo].[tMarketProduct] ([fProductID]),
     CONSTRAINT [FK_tMarketProductFavorite_tUser] FOREIGN KEY ([fUserId]) REFERENCES [dbo].[tUser] ([fId]),

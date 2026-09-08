@@ -5,7 +5,7 @@
     [fUserId]         INT            NOT NULL,
     [fRating]         TINYINT        NOT NULL,
     [fComment]        NVARCHAR (MAX) NULL,
-    [fCreatedDate]    DATETIME2 (7)  DEFAULT (getdate()) NOT NULL,
+    [fCreatedDate]    DATETIME2 (7)  DEFAULT (sysdatetime()) NOT NULL,
     CONSTRAINT [PK_tMarketProductReviews] PRIMARY KEY CLUSTERED ([fReviewID] ASC),
     CONSTRAINT [CK_tMarketProductReview_fRating] CHECK ([fRating]>=(1) AND [fRating]<=(5)),
     CONSTRAINT [FK_tMarketProductReview_tMarketOrderDetail] FOREIGN KEY ([fOrderDetailsID]) REFERENCES [dbo].[tMarketOrderDetail] ([fOrderDetailsID]),
