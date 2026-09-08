@@ -3,7 +3,7 @@
     [fCategoryNo]       VARCHAR (50)  NOT NULL,
     [fCategoriesName]   NVARCHAR (50) NOT NULL,
     [fParentCategoryId] BIGINT        NULL,
-    CONSTRAINT [PK_tMarketProductsCategory] PRIMARY KEY CLUSTERED ([fCategoryID] ASC),
+    CONSTRAINT [PK_tMarketProductCategory] PRIMARY KEY CLUSTERED ([fCategoryID] ASC),
     CONSTRAINT [FK_tMarketProductCategory_tMarketProductCategory] FOREIGN KEY ([fParentCategoryId]) REFERENCES [dbo].[tMarketProductCategory] ([fCategoryID]),
     CONSTRAINT [UQ_tMarketProductCategory_fCategoryNo] UNIQUE NONCLUSTERED ([fCategoryNo] ASC)
 );

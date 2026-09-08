@@ -5,7 +5,7 @@
     [fProductId]   INT           NOT NULL,
     [fQuantity]    INT           NOT NULL,
     [fCreatedDate] DATETIME2 (7) DEFAULT (sysdatetime()) NOT NULL,
-    CONSTRAINT [PK_tMarketShoppingCarts] PRIMARY KEY CLUSTERED ([fCartItemId] ASC),
+    CONSTRAINT [PK_tMarketShoppingCart] PRIMARY KEY CLUSTERED ([fCartItemId] ASC),
     CONSTRAINT [FK_tMarketShoppingCart_tMarketProduct] FOREIGN KEY ([fProductId]) REFERENCES [dbo].[tMarketProduct] ([fProductID]),
     CONSTRAINT [FK_tMarketShoppingCart_tSeller] FOREIGN KEY ([fSellerId]) REFERENCES [dbo].[tSeller] ([fId]),
     CONSTRAINT [FK_tMarketShoppingCart_tUser] FOREIGN KEY ([fUserId]) REFERENCES [dbo].[tUser] ([fId])
