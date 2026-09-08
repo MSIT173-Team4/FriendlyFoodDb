@@ -3,7 +3,7 @@
     [fProductNo]          VARCHAR (20)    NOT NULL,
     [fSellerId]           INT             NOT NULL,
     [fProductsCategoryNo] VARCHAR (50)    NOT NULL,
-    [fProductname]        NVARCHAR (100)  NOT NULL,
+    [fProductName]        NVARCHAR (100)  NOT NULL,
     [fDescription]        NVARCHAR (MAX)  NULL,
     [fStock]              INT             NOT NULL,
     [fRowVersion]         ROWVERSION      NOT NULL,
@@ -42,7 +42,7 @@ EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'產品類�
 
 
 GO
-EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'產品名稱', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'tMarketProduct', @level2type = N'COLUMN', @level2name = N'fProductname';
+EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'產品名稱', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'tMarketProduct', @level2type = N'COLUMN', @level2name = 'fProductName';
 
 
 GO

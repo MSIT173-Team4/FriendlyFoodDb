@@ -312,4 +312,7 @@
     </Build>
     <Build Include="Security\Permissions.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="FriendlyFoodDb.refactorlog" />
+  </ItemGroup>
 </Project>

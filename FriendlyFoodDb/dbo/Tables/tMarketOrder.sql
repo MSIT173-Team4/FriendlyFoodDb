@@ -3,7 +3,7 @@
     [fOrderNo]             VARCHAR (20)    NOT NULL,
     [fUserId]              INT             NOT NULL,
     [fSellerId]            INT             NOT NULL,
-    [fOrderDate]           DATETIME2 (7)   NOT NULL,
+    [fOrderDate]           DATETIME2 (7)   NOT NULL DEFAULT (sysdatetime()),
     [fShippingFee]         DECIMAL (18, 2) NOT NULL,
     [fShippingDiscount]    DECIMAL (18, 2) DEFAULT ((0)) NOT NULL,
     [fProductDiscount]     DECIMAL (18, 2) DEFAULT ((0)) NOT NULL,

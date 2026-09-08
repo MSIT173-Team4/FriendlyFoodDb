@@ -6,7 +6,7 @@
     [fPaymentStatus]  INT             NOT NULL,
     [fPaymentMethod]  NVARCHAR (50)   NOT NULL,
     [fPaymentTradeNo] VARCHAR (100)   NULL,
-    [fCreatedDate]    DATETIME2 (7)   NOT NULL,
+    [fCreatedDate]    DATETIME2 (7)   NOT NULL DEFAULT (sysdatetime()),
     [fPaidAt]         DATETIME2 (7)   NULL,
     CONSTRAINT [PK_tMarketCheckoutBatch] PRIMARY KEY CLUSTERED ([fBatchId] ASC),
     CONSTRAINT [FK_tMarketCheckoutBatch_tUser] FOREIGN KEY ([fUserId]) REFERENCES [dbo].[tUser] ([fId]),

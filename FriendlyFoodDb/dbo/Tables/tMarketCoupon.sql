@@ -14,7 +14,11 @@
     [fEndDate]           DATETIME2 (7)   NULL,
     [fIsActive]          BIT             NOT NULL,
     CONSTRAINT [PK_tMarketCoupon] PRIMARY KEY CLUSTERED ([fCouponId] ASC),
-    CONSTRAINT [FK_tMarketCoupon_tSeller] FOREIGN KEY ([fSellerId]) REFERENCES [dbo].[tSeller] ([fId])
+    CONSTRAINT [FK_tMarketCoupon_tSeller] FOREIGN KEY ([fSellerId]) REFERENCES [dbo].[tSeller] ([fId]), 
+    CONSTRAINT [CK_tMarketCoupon_fDiscountType] CHECK ([fDiscountType]='Percentage' OR [fDiscountType]='Fixed'),
+    CONSTRAINT [CK_tMarketCoupon_fScopeType] CHECK ([fScopeType]='Store' OR [fScopeType]='Platform' OR [fScopeType]='Shipping'),
+
+
 );
 
 
@@ -44,11 +48,11 @@ EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'優惠碼',
 
 
 GO
-EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'適用範圍', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'tMarketCoupon', @level2type = N'COLUMN', @level2name = N'fScopeType';
+EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'適用範圍 (Shipping: 運費券 / Platform: 全站券 / Store: 賣場券)', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'tMarketCoupon', @level2type = N'COLUMN', @level2name = N'fScopeType';
 
 
 GO
-EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'折抵類型', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'tMarketCoupon', @level2type = N'COLUMN', @level2name = N'fDiscountType';
+EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'折抵類型 (Fixed: 固定金額 / Percentage: 比例折扣)', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'tMarketCoupon', @level2type = N'COLUMN', @level2name = N'fDiscountType';
 
 
 GO

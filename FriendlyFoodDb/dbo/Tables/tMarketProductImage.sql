@@ -3,7 +3,7 @@
     [fProductID]      INT            NOT NULL,
     [fImageUrl]       NVARCHAR (255) NOT NULL,
     [fSortOrder]      SMALLINT       NOT NULL,
-    [fCreatedDate]    DATETIME2 (7)  NOT NULL,
+    [fCreatedDate]    DATETIME2 (7)  NOT NULL DEFAULT (sysdatetime()),
     CONSTRAINT [PK_tMarketProductImage] PRIMARY KEY CLUSTERED ([fProductImageID] ASC),
     CONSTRAINT [FK_tMarketProductImage_tMarketProduct] FOREIGN KEY ([fProductID]) REFERENCES [dbo].[tMarketProduct] ([fProductID])
 );

@@ -6,7 +6,7 @@
     [fDiscountScope]   VARCHAR (20)    NOT NULL,
     [fDiscountType]    NVARCHAR (20)   NOT NULL,
     [fAppliedAmount]   DECIMAL (18, 2) NOT NULL,
-    CONSTRAINT [PK_tMarketOrderDiscounts] PRIMARY KEY CLUSTERED ([fOrderDiscountId] ASC),
+    CONSTRAINT [PK_tMarketOrderDiscount] PRIMARY KEY CLUSTERED ([fOrderDiscountId] ASC),
     CONSTRAINT [FK_tMarketOrderDiscount_tMarketCoupon] FOREIGN KEY ([fCouponId]) REFERENCES [dbo].[tMarketCoupon] ([fCouponId]),
     CONSTRAINT [FK_tMarketOrderDiscount_tMarketOrder] FOREIGN KEY ([fOrderID]) REFERENCES [dbo].[tMarketOrder] ([fOrderID])
 );

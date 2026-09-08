@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="107e2c39-b41f-4304-ba98-dffd9c4b67bd" ChangeDateTime="09/08/2026 08:47:18">
+    <Property Name="ElementName" Value="[dbo].[tMarketProduct].[fProductname]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tMarketProduct]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fProductName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a5dd3e7b-6d02-4824-b276-19f9c9ddfed0" ChangeDateTime="09/08/2026 09:36:13">
+    <Property Name="ElementName" Value="[dbo].[PK_tMarketShoppingCarts]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[tMarketShoppingCart]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_tMarketShoppingCart]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="75599cd3-d3fb-4219-a108-1711e074d0a1" ChangeDateTime="09/08/2026 09:37:48">
+    <Property Name="ElementName" Value="[dbo].[PK_tMarketProductsCategory]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[tMarketProductCategory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_tMarketProductCategory]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="04084f37-7381-47a4-86b2-17d93f11130b" ChangeDateTime="09/08/2026 09:38:40">
+    <Property Name="ElementName" Value="[dbo].[PK_tMarketFavorites]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[tMarketProductFavorite]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_tMarketProductFavorites]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3495106d-9060-47d4-ad06-ebdc18eb96b9" ChangeDateTime="09/08/2026 09:39:12">
+    <Property Name="ElementName" Value="[dbo].[PK_tMarketOrderDiscounts]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[tMarketOrderDiscount]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_tMarketOrderDiscount]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="665b15d6-0853-4a1f-a0fe-3bf801666eb1" ChangeDateTime="09/08/2026 09:40:15">
+    <Property Name="ElementName" Value="[dbo].[PK_tMarketProductReviews]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[tMarketProductReview]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_tMarketProductReview]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fdf9fc36-bc87-4e77-b035-192fe081260f" ChangeDateTime="09/08/2026 09:51:18">
+    <Property Name="ElementName" Value="[dbo].[PK_tMarketProductFavorites]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[tMarketProductFavorite]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_tMarketProductFavorite]" />
+  </Operation>
+</Operations>
