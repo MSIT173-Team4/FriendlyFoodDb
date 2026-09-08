@@ -9,7 +9,7 @@
     [fRowVersion]         ROWVERSION      NOT NULL,
     [fPrice]              DECIMAL (18, 2) NOT NULL,
     [fBrandOrOrigin]      NVARCHAR (50)   NULL,
-    [fManufacturingDate]  DATE            NOT NULL,
+    [fManufacturingDate]  DATE            NULL,
     [fExpirationDate]     DATE            NULL,
     [fProductDate]        DATETIME2 (7)   NOT NULL,
     [fProductStatus]      TINYINT         DEFAULT ((1)) NOT NULL,
