@@ -15,8 +15,9 @@
     [fIsActive]          BIT             NOT NULL,
     CONSTRAINT [PK_tMarketCoupon] PRIMARY KEY CLUSTERED ([fCouponId] ASC),
     CONSTRAINT [FK_tMarketCoupon_tSeller] FOREIGN KEY ([fSellerId]) REFERENCES [dbo].[tSeller] ([fId]), 
-    CONSTRAINT [CK_tMarketCoupon_fScopeType] CHECK ([fScopeType] IN ('Shipping','Platform','Store')),
-    CONSTRAINT [CK_tMarketCoupon_fDiscountType] CHECK ([fDiscountType] IN ('Fixed','Percentage'))
+    CONSTRAINT [CK_tMarketCoupon_fDiscountType] CHECK ([fDiscountType]='Percentage' OR [fDiscountType]='Fixed'),
+    CONSTRAINT [CK_tMarketCoupon_fScopeType] CHECK ([fScopeType]='Store' OR [fScopeType]='Platform' OR [fScopeType]='Shipping'),
+
 
 );
 
