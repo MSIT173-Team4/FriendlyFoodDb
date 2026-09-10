@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[tUser] (
     [fId]         INT            IDENTITY (1, 1) NOT NULL,
     [fUsername]   VARCHAR (16)   NOT NULL,
-    [fPassword]   NVARCHAR(60) NOT NULL,
+    [fPassword]   NVARCHAR(MAX) NOT NULL,
     [fEmail]      VARCHAR (100)  NOT NULL,
     [fPhone]      VARCHAR (10)   NOT NULL,
     [fIdNum]      VARCHAR (10)   NOT NULL,
