@@ -2,7 +2,7 @@
     [fMessageID]      INT            IDENTITY (1, 1) NOT NULL,
     [fPostID]         INT            NOT NULL,
     [fUserId]         INT            NOT NULL,
-    [fReplyMessageID] INT            NOT NULL,
+    [fReplyMessageID] INT            NULL,
     [fMessageContent] NVARCHAR (MAX) NOT NULL,
     [fLikes]          INT            CONSTRAINT [DF_MessageTable_fLikes] DEFAULT ((0)) NOT NULL,
     [fMessageDate]    DATETIME       NOT NULL,
