@@ -49,4 +49,46 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[PK_tMarketProductFavorite]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="abfb6085-eb72-4dc6-b02f-b3c53a3ffdfa" ChangeDateTime="09/11/2026 07:25:00">
+    <Property Name="ElementName" Value="[dbo].[tPostLike].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tPostLike]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fPostId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b6944d16-c46b-453a-ba22-19c5a473f350" ChangeDateTime="09/11/2026 07:25:16">
+    <Property Name="ElementName" Value="[dbo].[tPostLike].[fPostId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tPostLike]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fPostID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d88c09d8-33d1-43aa-8f75-653d7500d710" ChangeDateTime="09/11/2026 07:26:05">
+    <Property Name="ElementName" Value="[dbo].[tPostLike].[f]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tPostLike]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fMessageID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="738046e9-1a56-4eb5-8d16-088208587fe0" ChangeDateTime="09/11/2026 07:28:29">
+    <Property Name="ElementName" Value="[dbo].[tPostLike].[fMessageID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tPostLike]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fUserID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a01f8426-fb49-4652-a3ea-1342c5f197f4" ChangeDateTime="09/11/2026 07:28:40">
+    <Property Name="ElementName" Value="[dbo].[tPostLike].[fUserID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tPostLike]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fUserId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="254b8a68-303a-4a1e-9667-112b2fe736a3" ChangeDateTime="09/11/2026 07:34:30">
+    <Property Name="ElementName" Value="[dbo].[tMessageLike].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tMessageLike]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fMessageID" />
+  </Operation>
 </Operations>
