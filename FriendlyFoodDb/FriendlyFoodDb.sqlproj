@@ -313,6 +313,7 @@
     <Build Include="Security\Permissions.sql" />
     <Build Include="dbo\Tables\tPostLike.sql" />
     <Build Include="dbo\Tables\tMessageLike.sql" />
+    <Build Include="dbo\Tables\tPostBlockTable.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="FriendlyFoodDb.refactorlog" />

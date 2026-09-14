@@ -5,7 +5,7 @@
     [fReplyMessageID] INT            NULL,
     [fMessageContent] NVARCHAR (MAX) NOT NULL,
     [fLikes]          INT            CONSTRAINT [DF_MessageTable_fLikes] DEFAULT ((0)) NOT NULL,
-    [fMessageDate]    DATETIME       NOT NULL,
+    [fMessageDate]    DATETIME2(0)       NOT NULL DEFAULT GETDATE(),
     [fMessageState]   TINYINT        CONSTRAINT [DF_MessageTable_fMessageState] DEFAULT ((1)) NOT NULL,
     CONSTRAINT [PK_MessageTable] PRIMARY KEY CLUSTERED ([fMessageID] ASC),
     CONSTRAINT [FK_Message_User] FOREIGN KEY ([fUserId]) REFERENCES [dbo].[tUser] ([fId]),

@@ -91,4 +91,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="fMessageID" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="3028413c-1082-4c22-9ca7-6c6c2eacf824" ChangeDateTime="09/14/2026 03:48:10">
+    <Property Name="ElementName" Value="[dbo].[tPostBlockTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tPostBlockTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fPostBlock" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="41ec07ee-0bdc-483b-a52d-00386454dd24" ChangeDateTime="09/14/2026 03:49:28">
+    <Property Name="ElementName" Value="[dbo].[tPostBlockTable].[fPostBlock]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tPostBlockTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fPostBlockID" />
+  </Operation>
 </Operations>
