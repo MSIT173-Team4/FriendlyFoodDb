@@ -7,8 +7,8 @@
     [fStartDate]      DATE           NULL,
     [fEndDate]        DATE           NULL,
     [fIsActive]       BIT            CONSTRAINT [DF_tFoodMapRecommendationCampaign_fIsActive] DEFAULT ((1)) NOT NULL,
-    [fCreatedTime]    DATETIME2 (7)  CONSTRAINT [DF_tFoodMapRecommendationCampaign_fCreatedTime] DEFAULT (sysdatetime()) NOT NULL,
-    [fUpdatedTime]    DATETIME2 (7)  NULL,
+    [fCreatedTime]    DATETIME2 (0)  CONSTRAINT [DF_tFoodMapRecommendationCampaign_fCreatedTime] DEFAULT (sysdatetime()) NOT NULL,
+    [fUpdatedTime]    DATETIME2 (0)  NULL,
     CONSTRAINT [PK_tFoodMapRecommendationCampaign] PRIMARY KEY CLUSTERED ([fCampaignID] ASC),
     CONSTRAINT [CK_tFoodMapRecommendationCampaign_fDate] CHECK ([fEndDate] IS NULL OR [fStartDate] IS NULL OR [fEndDate]>=[fStartDate])
 );

@@ -6,8 +6,8 @@
     [fStartTime]   TIME (7)       NULL,
     [fDescription] NVARCHAR (500) NULL,
     [fStatus]      VARCHAR (20)   CONSTRAINT [DF_tFoodMapTrip_fStatus] DEFAULT ('Draft') NOT NULL,
-    [fCreatedTime] DATETIME2 (7)  CONSTRAINT [DF_tFoodMapTrip_fCreatedTime] DEFAULT (sysdatetime()) NOT NULL,
-    [fUpdatedTime] DATETIME2 (7)  NULL,
+    [fCreatedTime] DATETIME2 (0)  CONSTRAINT [DF_tFoodMapTrip_fCreatedTime] DEFAULT (sysdatetime()) NOT NULL,
+    [fUpdatedTime] DATETIME2 (0)  NULL,
     CONSTRAINT [PK_tFoodMapTrip] PRIMARY KEY CLUSTERED ([fTripID] ASC),
     CONSTRAINT [CK_tFoodMapTrip_fStatus] CHECK ([fStatus]='Cancelled' OR [fStatus]='Completed' OR [fStatus]='Confirmed' OR [fStatus]='Planning' OR [fStatus]='Draft'),
     CONSTRAINT [FK_FoodMapTrip_User] FOREIGN KEY ([fUserID]) REFERENCES [dbo].[tUser] ([fId])
