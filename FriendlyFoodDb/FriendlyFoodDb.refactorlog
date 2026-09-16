@@ -105,4 +105,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="fPostBlockID" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="8c065a26-0d06-4f02-9594-e7b3fdbbb2a5" ChangeDateTime="09/16/2026 03:07:23">
+    <Property Name="ElementName" Value="[dbo].[tRefreshToken]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[dbo]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[TRefreshToken]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="210f3cb5-c2a3-4659-be0a-1dece89ab43c" ChangeDateTime="09/16/2026 03:07:32">
+    <Property Name="ElementName" Value="[dbo].[TRefreshToken]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[dbo]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[tRefreshToken]" />
+  </Operation>
 </Operations>
