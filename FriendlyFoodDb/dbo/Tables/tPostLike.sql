@@ -10,11 +10,11 @@
     CONSTRAINT [UQ_tPostLike_Post_User]
         UNIQUE ([fPostID], [fUserId]),
 
-    CONSTRAINT [FK_tPostLike_tPostTable]
+    CONSTRAINT [FK_tPostLike_tPostTable_fPostID]
         FOREIGN KEY ([fPostID])
         REFERENCES [dbo].[tPostTable] ([fPostID]),
 
-    CONSTRAINT [FK_tPostLike_tUser]
+    CONSTRAINT [FK_tPostLike_tUser_fUserId]
         FOREIGN KEY ([fUserId])
         REFERENCES [dbo].[tUser] ([fId])
 );

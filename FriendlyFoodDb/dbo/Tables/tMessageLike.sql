@@ -10,11 +10,11 @@
     CONSTRAINT [UQ_tMessageLike_Message_User]
         UNIQUE ([fMessageID], [fUserId]),
 
-    CONSTRAINT [FK_tMessageLike_tMessageTable]
+    CONSTRAINT [FK_tMessageLike_tMessageTable_fMessageID]
         FOREIGN KEY ([fMessageID])
         REFERENCES [dbo].[tMessageTable] ([fMessageID]),
 
-    CONSTRAINT [FK_tMessageLike_tUser]
+    CONSTRAINT [FK_tMessageLike_tUser_fUserId]
         FOREIGN KEY ([fUserId])
         REFERENCES [dbo].[tUser] ([fId])
 );
