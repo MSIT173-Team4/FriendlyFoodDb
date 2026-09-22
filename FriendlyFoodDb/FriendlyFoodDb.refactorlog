@@ -119,4 +119,11 @@
     <Property Name="ParentElementType" Value="SqlSchema" />
     <Property Name="NewName" Value="[tRefreshToken]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="32161407-ce4c-452f-ba6d-b3177dbda86d" ChangeDateTime="09/22/2026 02:44:22">
+    <Property Name="ElementName" Value="[dbo].[fPostBookmarksTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[fPostBookmarksTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fBookmark_Id" />
+  </Operation>
 </Operations>
