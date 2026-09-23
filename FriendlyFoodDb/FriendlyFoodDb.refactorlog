@@ -126,4 +126,32 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="fBookmark_Id" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="823fb382-1342-42a3-9b4f-59bd2682c52b" ChangeDateTime="09/23/2026 08:27:46">
+    <Property Name="ElementName" Value="[dbo].[tFoodMapTripRoute].[fTotalDistance]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tFoodMapTripRoute]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fDistanceMeters" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8aaea7fc-db2f-4394-9c5c-689ea0e37b83" ChangeDateTime="09/23/2026 08:27:57">
+    <Property Name="ElementName" Value="[dbo].[tFoodMapTripRoute].[fTotalDuration]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tFoodMapTripRoute]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fDurationSeconds" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8e78c09a-0625-4344-9b8f-c2d38230407b" ChangeDateTime="09/23/2026 08:31:48">
+    <Property Name="ElementName" Value="[dbo].[tFoodMapTripRoute].[fFromTripPlaceId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tFoodMapTripRoute]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fFromTripPlaceID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="305b8fd9-c4d0-40ed-92f5-636597e2a76c" ChangeDateTime="09/23/2026 08:31:54">
+    <Property Name="ElementName" Value="[dbo].[tFoodMapTripRoute].[fToTripPlaceId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tFoodMapTripRoute]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fToTripPlaceID" />
+  </Operation>
 </Operations>
