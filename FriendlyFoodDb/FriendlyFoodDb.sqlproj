@@ -314,6 +314,7 @@
     <Build Include="dbo\Tables\tPostLike.sql" />
     <Build Include="dbo\Tables\tMessageLike.sql" />
     <Build Include="dbo\Tables\tPostBlockTable.sql" />
+    <Build Include="dbo\Tables\tFoodMapIngredient.sql" />
     <Build Include="tRefreshToken.sql" />
     <Build Include="dbo\Tables\tPostBookmarks.sql" />
   </ItemGroup>
