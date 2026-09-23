@@ -14,10 +14,12 @@
     [fProductDate]        DATETIME2 (7)   NOT NULL,
     [fProductStatus]      TINYINT         DEFAULT ((1)) NOT NULL,
     [fReportCount]        INT             DEFAULT ((0)) NOT NULL,
+    [fIngredientId] INT NULL, 
     CONSTRAINT [PK_tMarketProduct] PRIMARY KEY CLUSTERED ([fProductID] ASC),
     CONSTRAINT [FK_tMarketProduct_tMarketProductCategory] FOREIGN KEY ([fProductsCategoryNo]) REFERENCES [dbo].[tMarketProductCategory] ([fCategoryNo]),
     CONSTRAINT [FK_tMarketProduct_tSeller] FOREIGN KEY ([fSellerId]) REFERENCES [dbo].[tSeller] ([fId]),
-    CONSTRAINT [UQ_tMarketProduct_fProductNo] UNIQUE NONCLUSTERED ([fProductNo] ASC)
+    CONSTRAINT [UQ_tMarketProduct_fProductNo] UNIQUE NONCLUSTERED ([fProductNo] ASC), 
+    CONSTRAINT [FK_tMarketProduct_tIngredient] FOREIGN KEY ([fIngredientId]) REFERENCES [dbo].[tIngredient]([fId])
 );
 
 
@@ -84,3 +86,6 @@ EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'商品狀�
 GO
 EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'被檢舉次數', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'tMarketProduct', @level2type = N'COLUMN', @level2name = N'fReportCount';
 
+
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',    @value = N'官方標準食材Id',    @level0type = N'SCHEMA',    @level0name = N'dbo',    @level1type = N'TABLE',    @level1name = N'tMarketProduct',    @level2type = N'COLUMN',    @level2name = N'fIngredientId'

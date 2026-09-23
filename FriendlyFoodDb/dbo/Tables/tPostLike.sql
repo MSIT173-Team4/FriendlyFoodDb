@@ -1,16 +1,20 @@
 ﻿CREATE TABLE [dbo].[tPostLike]
 (
+    [fPostLikeID] INT IDENTITY(1,1) NOT NULL,
     [fPostID] INT NOT NULL,
     [fUserId] INT NOT NULL,
 
     CONSTRAINT [PK_tPostLike]
-        PRIMARY KEY ([fPostID], [fUserId]),
+        PRIMARY KEY ([fPostLikeID]),
 
-    CONSTRAINT [FK_tPostLike_tPostTable]
+    CONSTRAINT [UQ_tPostLike_Post_User]
+        UNIQUE ([fPostID], [fUserId]),
+
+    CONSTRAINT [FK_tPostLike_tPostTable_fPostID]
         FOREIGN KEY ([fPostID])
         REFERENCES [dbo].[tPostTable] ([fPostID]),
 
-    CONSTRAINT [FK_tPostLike_tUser]
+    CONSTRAINT [FK_tPostLike_tUser_fUserId]
         FOREIGN KEY ([fUserId])
         REFERENCES [dbo].[tUser] ([fId])
 );
