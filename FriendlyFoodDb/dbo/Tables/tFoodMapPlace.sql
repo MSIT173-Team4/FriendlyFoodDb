@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[tFoodMapPlace] (
     [fPlaceID]           INT             IDENTITY (1, 1) NOT NULL,
     [fGooglePlaceID]     VARCHAR (100)   NULL,
-    [fPlaceCategoryID]   INT             NOT NULL,
+    [fPlaceCategoryID]   INT             NULL,
     [fName]              NVARCHAR (100)  NOT NULL,
     [fAddress]           NVARCHAR (300)  NOT NULL,
     [fLatitude]          DECIMAL (10, 7) NOT NULL,

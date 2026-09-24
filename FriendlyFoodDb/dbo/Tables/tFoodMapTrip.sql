@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[tFoodMapTrip] (
     [fTripID]      INT            IDENTITY (1, 1) NOT NULL,
-    [fUserID]      INT            NOT NULL,
+    [fUserID]      INT            NULL,
     [fTripName]    NVARCHAR (100) NOT NULL,
     [fTripDate]    DATE           NULL,
     [fStartTime]   TIME (7)       NULL,
