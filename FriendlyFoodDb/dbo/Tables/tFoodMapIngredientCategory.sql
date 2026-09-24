@@ -4,6 +4,6 @@
     [fDescription]          NVARCHAR (200) NULL,
     [fCreatedTime]          DATETIME2 (0)  CONSTRAINT [DF_tFoodMapIngredientCategory_CreatedTime] DEFAULT (sysdatetime()) NOT NULL,
     CONSTRAINT [PK_tFoodMapIngredientCategory] PRIMARY KEY CLUSTERED ([fIngredientCategoryID] ASC),
-    CONSTRAINT [UQ_tFoodMapIngredientCategory_fCategoryName] UNIQUE NONCLUSTERED ([fCategoryName] ASC)
+    CONSTRAINT [UQ_tFoodMapIngredientCategory_fCategoryName] UNIQUE NONCLUSTERED ([fCategoryName] ASC), 
 );
 
