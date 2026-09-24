@@ -11,6 +11,8 @@
     [fIsAdmin]    BIT            NOT NULL,
     [fCreateTime] DATETIME       NOT NULL,
     [fLastLogin]  DATETIME       NULL,
+    [fFirstName] VARCHAR(20) NULL, 
+    [fLastName] VARCHAR(4) NULL, 
     CONSTRAINT PK_tUser PRIMARY KEY CLUSTERED ([fId] ASC),
     UNIQUE NONCLUSTERED ([fUsername] ASC)
 );
