@@ -6,7 +6,6 @@
     [fStatus]      INT           NOT NULL,
     [fApplyDate]   DATETIME      NOT NULL,
     PRIMARY KEY CLUSTERED ([fId] ASC),
-    CONSTRAINT [FK_Seller_Status] FOREIGN KEY ([fStatus]) REFERENCES [dbo].[tStatus] ([fId]),
     CONSTRAINT [FK_Seller_User] FOREIGN KEY ([fUserId]) REFERENCES [dbo].[tUser] ([fId])
 );
 
