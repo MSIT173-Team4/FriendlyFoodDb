@@ -154,4 +154,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="fToTripPlaceID" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="e28a1219-1c49-453f-9901-2cac91221067" ChangeDateTime="09/29/2026 02:12:20">
+    <Property Name="ElementName" Value="[dbo].[tEmailVerification].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tEmailVerification]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7cae406a-a2ad-4b09-a8f1-7ab3852a562c" ChangeDateTime="09/29/2026 02:12:44">
+    <Property Name="ElementName" Value="[dbo].[tEmailVerification].[f]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tEmailVerification]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fType" />
+  </Operation>
 </Operations>
